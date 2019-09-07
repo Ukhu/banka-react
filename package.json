@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js",
     "heroku-postbuild": "npm run build",
     "lint": "eslint src",
-    "test": "jest --forceExit --verbose --coverage"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
