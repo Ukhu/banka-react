@@ -20,6 +20,37 @@ main {
   min-height: calc(100vh - 180px);
 }
 
+/**** Resuables ****/
+
+.validation-error {
+  margin: 2px 0 10px 0;
+  color: #f84e4e;
+  font-size: 12px;
+}
+
+input,
+select {
+  width: 97%;
+  height: 50px;
+  color: #013144;
+  border: 1px solid #616263;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.form-button {
+  height: 50px;
+  font-size: 20px;
+  color: #e8ebec;
+  text-transform: uppercase;
+  background-color: #9ec7e0;
+  border: 1px solid #9ec7e0;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+}
+
 /******** HEADER *******/
 
 header {
@@ -156,6 +187,80 @@ footer p {
   border: 1px solid #013144;
 }
 
+/***** SIGN-UP SECTION *****/
+
+#signup .form-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #616263;
+}
+
+#message {
+  display: block;
+  background-color: #f84e4e;
+  color: #e8ebec;
+  text-align: center;
+  line-height: 180%;
+  margin: 10px 0 0 0;
+  min-height: 30px;
+}
+
+#signup-form form {
+  margin-top: 15px;
+}
+
+#signup-form h3 {
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #616262;
+}
+
+.display-half-div {
+  width: 49.2%;
+  float: left;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.left-side {
+  padding-right: 5px;
+}
+
+.right-side {
+  padding-left: 5px;
+}
+
+/****** ALL PAGES WITH FORMS *****/
+
+.all-form {
+  max-width: 450px;
+  height: fit-content;
+  margin: 0 auto;
+  padding-top: 50px;
+  min-height: calc(100vh - 255px);
+}
+
+.all-form form {
+  margin-bottom: 0;
+}
+
+.all-form h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #616263;
+}
+.all-form button {
+  width: 100%;
+}
+
 
 /********************** MEDIA QUERIES ************************/
 
@@ -213,5 +318,24 @@ footer p {
 
   #landing-page p {
     max-width: 380px;
+  }
+
+  /**** Sign-up Section Media Queries ****/
+
+  #signup-form {
+    max-width: 350px;
+  }
+
+  .display-half-div {
+    width: 100%;
+    float: none;
+  }
+
+  .left-side {
+    padding-right: 0;
+  }
+
+  .right-side {
+    padding-left: 0;
   }
 }
