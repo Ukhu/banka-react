@@ -1,9 +1,9 @@
 import * as types from '../actions/actionTypes';
 
-const accountReducer = (state = [], action) => {
+const accountReducer = (state = {}, action) => {
   switch (action.type) {
-    case types.CREATE_ACCOUNTS:
-      return [...state, action.account];
+    case types.CREATE_BANK_ACCOUNT:
+      return { ...state, ...action.accountDetails };
     default:
       return state;
   }
