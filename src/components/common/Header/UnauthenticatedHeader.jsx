@@ -16,9 +16,7 @@ const UnauthenticatedHeader = () => (
           </Link>
         </p>
         <p className="login-signup">
-          <Link className="pre-login-link" to="/signin">
             Sign In
-          </Link>
         </p>
       </div>
     </div>

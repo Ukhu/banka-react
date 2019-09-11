@@ -7,7 +7,8 @@ export const signupUser = (user) => ((dispatch) => (axios.post('https://osaukhu-
   ...user,
 }).then(({ data }) => {
   dispatch(signupSuccess(data.data[0]));
-  window.localStorage.token = data.data[0].token;
+  const [currentUser] = data.data;
+  window.localStorage.setItem('user', JSON.stringify(currentUser));
 }).catch((error) => {
   throw (error);
 })));

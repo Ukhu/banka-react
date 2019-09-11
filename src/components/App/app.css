@@ -267,6 +267,105 @@ footer p {
 }
 
 
+/****************** DASHBOARD PAGE **********************/
+#pen-icon {
+  cursor: pointer;
+}
+
+
+.dashboard #list-icon {
+  line-height: 45px;
+}
+
+#list-icon {
+  float: right;
+    font-size: 25px;
+    margin-left: 20;
+    color: #616263;
+}
+
+/******* ACCOUNT DETAILS SECTION *******/
+
+.account-details {
+  padding: 20px 0;
+  overflow: auto;
+}
+
+.acc-details-div {
+  width: 50%;
+  float: left;
+}
+
+.left {
+  text-align: right;
+}
+
+#dashboard-main-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  height: 40px;
+}
+
+.details-div {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 20px;
+  border: 2px solid #616263;
+  background-color: #ffffff;
+}
+
+.display-full-div {
+  overflow: auto;
+}
+
+.acc-details-div p {
+  margin: 0;
+  color: #616263;
+}
+
+.acc-details-title {
+  font-size: 14px;
+  border-bottom: #616263 1px solid;
+}
+
+.acc-details-val {
+  font-size: 24px;
+}
+
+/****** PROFILE ********/
+
+.dashboard-section-title {
+  max-width: 800px;
+  text-align: left;
+  margin: 0 auto 10px auto;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #616263;
+}
+
+.dashboard-section-title i {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#profile .details-div p span {
+  color: #71a9d6;
+  font-weight: bold;
+}
+
+#profile .details-div p {
+  width: 100%;
+  height: 50px;
+  color: #013144;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
 /********************** MEDIA QUERIES ************************/
 
 @media (max-width: 796px) {

@@ -18,6 +18,17 @@ class CreateAccountContainer extends Component {
     };
   }
 
+  componentDidMount() {
+    const accountDetails = localStorage.getItem('accountDetails');
+    const { user, history } = this.props;
+
+    if (accountDetails) {
+      history.push('/dashboard');
+    } else if (!user) {
+      window.history.back();
+    }
+  }
+
   handleInputChange = (e) => {
     e.persist();
     const { value } = e.target;
@@ -58,7 +69,7 @@ class CreateAccountContainer extends Component {
     const { user } = this.props;
     return (
       <>
-        <AuthenticatedHeader user={user.firstName} />
+        <AuthenticatedHeader user={user.firstName} link="new/bank-account" />
         <main>
           <section id="create-account" className="container">
             <div className="all-form">
