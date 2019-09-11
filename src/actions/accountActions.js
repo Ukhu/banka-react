@@ -7,13 +7,14 @@ export const createBankAccountSuccess = (accountDetails) => (
 
 export const createBankAccount = (accountType) => ((dispatch) => (axios.post('https://osaukhu-banka.herokuapp.com/api/v1/accounts', {
   type: accountType,
-}, { headers: { 'x-access-token': `${window.localStorage.token}` } }).then(({ data }) => {
+}, { headers: { 'x-access-token': `${JSON.parse(window.localStorage.getItem('user')).token}` } }).then(({ data }) => {
   const { accountNumber, type, openingBalance } = data.data[0];
   const accountDetails = {
     accountNumber,
     type,
     openingBalance,
   };
+  window.localStorage.setItem('accountDetails', JSON.stringify(accountDetails));
   dispatch(createBankAccountSuccess(accountDetails));
 }).catch((error) => {
   throw (error);

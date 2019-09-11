@@ -21,6 +21,14 @@ class SignupContainer extends Component {
     };
   }
 
+  componentDidMount() {
+    const user = localStorage.getItem('user');
+
+    if (user) {
+      window.history.back();
+    }
+  }
+
   validateInput = (index, value) => {
     let error = '';
     const { form } = this.state;

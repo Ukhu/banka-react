@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const AuthenticatedHeader = ({ user }) => (
+const AuthenticatedHeader = ({ user, link }) => (
   <header>
     <div className="container">
       <div id="header-title">
-        <Link to="/new/bank-account">
+        <Link to={`/${link}`}>
           <h1>Banka</h1>
         </Link>
       </div>
@@ -16,7 +16,16 @@ const AuthenticatedHeader = ({ user }) => (
           {' '}
           {user}
         </p>
-        <a id="logout" href="index.html">Logout</a>
+        <Link
+          id="logout"
+          to="/"
+          onClick={() => {
+            window.localStorage.removeItem('user');
+            window.localStorage.removeItem('accountDetails');
+          }}
+        >
+        Logout
+        </Link>
       </div>
     </div>
   </header>
@@ -24,6 +33,7 @@ const AuthenticatedHeader = ({ user }) => (
 
 AuthenticatedHeader.propTypes = {
   user: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default AuthenticatedHeader;
